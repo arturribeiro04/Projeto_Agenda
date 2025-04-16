@@ -40,9 +40,17 @@ def adicionar_contato(contato,telefone,endereco,email):
 
     }
 
+def excluir_contato(contato):
+
+    AGENDA.pop(contato)
+    
+    print(contato + " EXCLUÍDO COM SUCESSO!")
+
 print("-" * 20 + "ADICIONAR UM CONTATO" + "-" * 20)
 
 adicionar_contato('Renato','93344-6677','Estrada do Renato','renato@email.com.br')
+
+adicionar_contato('Carla','98877-1122',None, None)
 
 print("-" * 20 + "MOSTRAR TODOS OS CONTATOS" + "-" * 20)
 
@@ -51,3 +59,7 @@ mostrar_contatos()
 print("-" * 20 + "MOSTRAR UM CONTATO" + "-" * 20)
 
 buscar_contato('maria')
+
+print("-" * 20 + "EXCLUIR UM CONTATO" + "-" * 20)
+
+excluir_contato('Carla')
